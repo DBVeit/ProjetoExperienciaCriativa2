@@ -32,10 +32,10 @@
       <div class="section"></div>
   <main>
     <center>
-      <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
+      <img class="responsive-img" style="width: 250px;" src="imagem aqui" />
       <div class="section"></div>
 
-      <h5 class="indigo-text">Please, login into your account</h5>
+      <h5 class="indigo-text"></h5>
       <div class="section"></div>
 
       <div class="container">
@@ -50,17 +50,17 @@
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' />
-                <label for='email'>Enter your email</label>
+                <label for='email'>Email</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Enter your password</label>
+                <label for='password'>Senha</label>
               </div>
               <label style='float: right;'>
-								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+								<a class='pink-text' href='#!'><b>Esqueceu a senha ?</b></a>
 							</label>
             </div>
 
@@ -73,7 +73,7 @@
           </form>
         </div>
       </div>
-      <a href="#!">Create account</a>
+      <a href="#!">Criar conta</a>
     </center>
 
     <div class="section"></div>
@@ -89,8 +89,12 @@
   <div class="container">
     <div class="section">
 
+    
       <!--   Icon Section   -->
+
       <div class="row">
+
+      <!--
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
@@ -99,8 +103,8 @@
             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
           </div>
         </div>
-
-        <div class="col s12 m4">
+      -->
+        <!--<div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
             <h5 class="center">User Experience Focused</h5>
@@ -108,20 +112,23 @@
             <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
           </div>
         </div>
+        -->
 
-        <div class="col s12 m4">
+        <!--<div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Easy to work with</h5>
 
             <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
           </div>
+        -->
         </div>
       </div>
 
     </div>
     <br><br>
   </div>
+  
 
   <footer class="page-footer orange">
     <div class="container">
