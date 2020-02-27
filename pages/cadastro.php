@@ -9,8 +9,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
@@ -49,6 +49,20 @@
 
             <div class='row'>
               <div class='input-field col s12'>
+                <input class='validate' type='text' name='name' id='name' />
+                <label for='name'>Nome</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='text' name='surname' id='surname' />
+                <label for='surname'>Sobrenome</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' />
                 <label for='email'>Email</label>
               </div>
@@ -73,7 +87,7 @@
           </form>
         </div>
       </div>
-      <a href="pages/cadastro.php">Criar conta</a>
+      <a href="">Criar conta</a>
     </center>
 
     <div class="section"></div>
@@ -134,8 +148,8 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4"></p>
 
 
         </div>
@@ -169,8 +183,8 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
 
   </body>
 </html>
