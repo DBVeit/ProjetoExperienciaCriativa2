@@ -49,39 +49,15 @@
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='name' id='name' />
-                <label for='name'>Nome</label>
-              </div>
-            </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='text' name='surname' id='surname' />
-                <label for='surname'>Sobrenome</label>
-              </div>
-            </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' />
                 <label for='email'>Email</label>
               </div>
             </div>
 
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Senha</label>
-              </div>
-                <label style='float: right;'>
-								<a class='pink-text' href='esqueci-senha.php'><b>Esqueceu a senha ?</b></a>
-			    </label>
-            </div>
-
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>CADASTRAR</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Enviar e-mail de recuperacao</button>
               </div>
             </center>
           </form>
