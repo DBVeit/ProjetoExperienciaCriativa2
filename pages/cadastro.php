@@ -7,10 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Starter Template - Materialize</title>
 
+    
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/jquery.md5.js"></script>
+  <script>
+      $(document).ready(function(){
+          
+        
+        $("#cadastro").submit(function(){
+                var password = document.getElementById('password').value;
+                password = $.MD5('password');
+                document.getElementById("password").value = password;                
+            })
+         
+        });
+    </script>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
@@ -41,7 +57,7 @@
       <div class="container">
         <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-          <form class="col s12" method="post" action="../php/functions/cadastra-usuario.php">
+          <form class="col s12" onsubmit="return e()" method="post" action="../php/functions/cadastra-usuario.php" id="cadastro">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -81,7 +97,7 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>CADASTRAR</button>
+                <button type='submit'   name='btn_login' class='col s12 btn btn-large waves-effect indigo'>CADASTRAR</button>
               </div>
             </center>
           </form>
@@ -182,9 +198,10 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
   <script src="../js/materialize.js"></script>
   <script src="../js/init.js"></script>
+  
 
   </body>
 </html>
