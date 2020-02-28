@@ -15,18 +15,7 @@
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../js/jquery.md5.js"></script>
-  <script>
-      $(document).ready(function(){
-          
-        
-        $("#cadastro").submit(function(){
-                var password = document.getElementById('password').value;
-                password = $.MD5('password');
-                document.getElementById("password").value = password;                
-            })
-         
-        });
-    </script>
+  <script src="../js/encript.js"></script>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
