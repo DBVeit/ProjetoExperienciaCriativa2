@@ -6,5 +6,6 @@ echo $email;
 
 mysqli_query($mysqli, "UPDATE pessoa SET confirmacao = '1' WHERE email ='$email'");
 
+header('Location: ../../index.php');
 
 ?>

@@ -7,10 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Starter Template - Materialize</title>
 
+    
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery.md5.js"></script>
+  <script src="js/encript.js"></script>
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
@@ -41,7 +46,7 @@
       <div class="container">
         <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-          <form class="col s12" method="post" action="">
+          <form class="col s12" onsubmit="return e()" method="post" action="php/functions/autentica-usuario.php" id="cadastro">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -59,15 +64,15 @@
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Senha</label>
               </div>
-              <label style='float: right;'>
-								<a class='pink-text' href='#!'><b>Esqueceu a senha ?</b></a>
-							</label>
+                <label style='float: right;'>
+								<a class='pink-text' href='esqueci-senha.php'><b>Esqueceu a senha ?</b></a>
+			    </label>
             </div>
 
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                <button type='submit'   name='btn_login' class='col s12 btn btn-large waves-effect indigo'>ENTRAR</button>
               </div>
             </center>
           </form>
@@ -134,8 +139,8 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4"></p>
 
 
         </div>
@@ -168,9 +173,10 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  
 
   </body>
 </html>
