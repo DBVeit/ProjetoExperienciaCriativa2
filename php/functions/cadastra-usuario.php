@@ -20,7 +20,7 @@ $message .= "http://localhost/ProjetoExperienciaCriativa2/php/functions/confirma
 
 $mail= new PHPMailer;
 $mail->IsSMTP();        
-$mail->SMTPDebug = 1;       // 0 = não mostra o debug, 2 = mostra o debug (mensagens de erro)
+$mail->SMTPDebug = 0;       // 0 = não mostra o debug, 2 = mostra o debug (mensagens de erro)
 $mail->SMTPAuth = true;     // Autenticação ativada
 $mail->SMTPSecure = 'ssl';  
 $mail->Host = 'smtp.gmail.com'; 
@@ -34,7 +34,7 @@ $mail->msgHTML($message);
    
 $mail->send();
 
-
+header('Location: ../../index.php');
 
 /*
 email: textexpcri@gmail.com
