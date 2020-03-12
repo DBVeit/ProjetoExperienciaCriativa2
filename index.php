@@ -18,7 +18,7 @@
   <script src="js/encript.js"></script>
 </head>
 <body>
-  <nav class="red darken-2 lighten-1" role="navigation">
+  <nav class="grey darken-3 lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">WatchIt!</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Proto 1</a></li>
@@ -40,10 +40,10 @@
       <div class="section"></div>
       <div class="section"></div>
 
-      <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+      <div class="container ">
+        <div class=" grey darken-3 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; ">
 
-          <form class="col s12" onsubmit="return e()" method="post" action="php/functions/autentica-usuario.php" id="cadastro">
+          <form class="col s12 " onsubmit="return e()" method="post" action="php/functions/autentica-usuario.php" id="cadastro">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -132,7 +132,7 @@
   </div>
   
 
-  <footer class="page-footer red darken-2">
+  <footer class="page-footer grey darken-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">

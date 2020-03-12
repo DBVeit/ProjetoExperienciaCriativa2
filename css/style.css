@@ -24,7 +24,8 @@ main {
 }
 
 body {
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/teather.jpg");
+  background-size: cover;
   
 }
 
