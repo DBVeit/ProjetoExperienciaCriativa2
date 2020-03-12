@@ -18,7 +18,7 @@
   <script src="js/encript.js"></script>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
+  <nav class="red darken-2 lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">WatchIt!</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Proto 1</a></li>
@@ -69,7 +69,7 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit'   name='btn_login' class='col s12 btn btn-large waves-effect indigo'>ENTRAR</button>
+                <button type='submit'   name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
               </div>
             </center>
           </form>
@@ -132,7 +132,7 @@
   </div>
   
 
-  <footer class="page-footer orange">
+  <footer class="page-footer red darken-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
