@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>WatchIt! - Prototype 1</title>
 
     
 
@@ -19,28 +19,25 @@
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">WatchIt!</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Proto 1</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Proto 1</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <div class="row center">
-      <div class="section"></div>
+      
   <main>
     <center>
-      <img class="responsive-img" style="width: 250px;" src="imagem aqui" />
       <div class="section"></div>
 
-      <h5 class="indigo-text"></h5>
+      <div class="section"></div>
       <div class="section"></div>
 
       <div class="container">
@@ -65,7 +62,7 @@
                 <label for='password'>Senha</label>
               </div>
                 <label style='float: right;'>
-								<a class='pink-text' href='esqueci-senha.php'><b>Esqueceu a senha ?</b></a>
+								<a class='pink-text' href='pages/esqueci-senha.php'><b>Esqueceu a senha ?</b></a>
 			    </label>
             </div>
 
