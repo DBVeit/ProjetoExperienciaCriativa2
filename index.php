@@ -41,7 +41,7 @@
       <div class="section"></div>
 
       <div class="container ">
-        <div class=" grey darken-3 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; ">
+        <div class="grey darken-3 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; ">
 
           <form class="col s12 " onsubmit="return e()" method="post" action="php/functions/autentica-usuario.php" id="cadastro">
             <div class='row'>

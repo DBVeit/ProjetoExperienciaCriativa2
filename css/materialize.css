@@ -2604,7 +2604,7 @@ ul:not(.browser-default) > li {
 }
 
 a {
-  color: #039be5;
+  color: #9e9e9e;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -4328,7 +4328,7 @@ nav .sidenav-trigger i {
 
 nav .brand-logo {
   position: absolute;
-  color: #fff;
+  color: #c62828;
   display: inline-block;
   font-size: 2.1rem;
   padding: 0;
