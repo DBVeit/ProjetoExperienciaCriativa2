@@ -71,11 +71,17 @@
               <div class='row'>
                 <button type='submit'   name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
               </div>
+              <div class='row'>
+              <a href="pages/cadastro.php">Criar conta</a>
+              </div>
             </center>
+              
+                        
+            
           </form>
         </div>
       </div>
-      <a href="pages/cadastro.php">Criar conta</a>
+      
     </center>
 
     <div class="section"></div>
