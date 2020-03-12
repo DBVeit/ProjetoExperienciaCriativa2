@@ -2128,7 +2128,7 @@
 }
 
 .white-text {
-  color: #FFFFFF !important;
+  color: #9e9e9e !important;
 }
 
 .transparent {
@@ -4397,7 +4397,7 @@ nav ul a {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   font-size: 1rem;
-  color: #fff;
+  color: #9e9e9e;
   display: block;
   padding: 0 15px;
   cursor: pointer;
