@@ -10,6 +10,7 @@
     
 
   <!-- CSS  -->
+  <link rel="stylesheet" href="css/all.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -69,7 +70,7 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit'   name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
               </div>
               <div class='row'>
               <a href="pages/cadastro.php">Criar conta</a>
@@ -142,8 +143,8 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-        <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4"></p>
+        <h5 class="white-text">Quem somos</h5>
+          <p class="grey-text text-lighten-4">Serviço de Streaming de vídeos do Youtube ! super útil</p>
 
 
         </div>
@@ -159,10 +160,11 @@
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!"><i style="font-size: 35px; padding: 0px 10px 7px 0px;"class="fab fa-facebook"></i></a>
+            <a class="white-text" href="#!"><i style="font-size: 35px;"class="fab fa-instagram"></i></a></li>
+            <li><a class="white-text" href="#!"><i style="font-size: 35px; padding: 0px 10px 7px 0px;"class="fab fa-twitter"></i></a>
+            <a class="white-text" href="#!"><i style="font-size: 32px;"class="fab fa-google"></i></a></li>
+            
           </ul>
         </div>
       </div>

@@ -18,8 +18,8 @@
   <script src="../js/encript.js"></script>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">WatchIt!</a>
+  <nav class="grey darken-3 lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Proto 1</a></li>
       </ul>
@@ -39,48 +39,42 @@
     <center>
 
       <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <div class="grey darken-3 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px;">
 
           <form class="col s12" onsubmit="return e()" method="post" action="../php/functions/cadastra-usuario.php" id="cadastro">
             <div class='row'>
-              <div class='col s12'>
-              </div>
-            </div>
-
-            <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='name' id='name' />
+                <input class='validate' type='text' name='name' id='name' required/>
                 <label for='name'>Nome</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='surname' id='surname' />
+                <input class='validate' type='text' name='surname' id='surname' required/>
                 <label for='surname'>Sobrenome</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' />
+                <input class='validate' type='email' name='email' id='email' required/>
                 <label for='email'>Email</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
+                <input class='validate' type='password' name='password' id='password' required/>
                 <label for='password'>Senha</label>
-              </div>
-                <label style='float: right;'>
-			    </label>
+              </div>    
+              
             </div>
-
-            <br />
+            
+            
             <center>
               <div class='row'>
-                <button type='submit'   name='btn_login' class='col s12 btn btn-large waves-effect indigo'>CADASTRAR</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
               </div>
             </center>
           </form>
@@ -142,12 +136,12 @@
   </div>
   
 
-  <footer class="page-footer orange">
+  <footer class="page-footer grey darken-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-        <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4"></p>
+        <h5 class="white-text">Quem somos</h5>
+          <p class="grey-text text-lighten-4">Serviço de streaming de vídeos do Youtube ! Super útil</p>
 
 
         </div>
