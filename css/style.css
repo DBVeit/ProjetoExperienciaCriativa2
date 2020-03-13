@@ -17,17 +17,14 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-image:url("../img/teather.jpg") ;
+  background-size: cover;
 }
 
 main {
   flex: 1 0 auto;
 }
 
-body {
-  background-image: url("../img/teather.jpg");
-  background-size: cover;
-  
-}
 
 .input-field input[type=date]:focus + label,
 .input-field input[type=text]:focus + label,

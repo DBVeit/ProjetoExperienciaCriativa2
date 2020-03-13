@@ -18,9 +18,9 @@
   <script src="../js/jquery.md5.js"></script>
   <script src="../js/encript.js"></script>
 </head>
-<body>
-  <nav class="grey darken-3 lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
+<body class="bg-image">
+  <nav class="grey darken-3 lighten-1" style="opacity: 0.8; background-image: linear-gradient(-120DEG,#E50914,#221F1F,#221F1F)" role="navigation" >
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo" ><i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Proto 1</a></li>
       </ul>
@@ -40,7 +40,7 @@
     <center>
 
       <div class="container">
-        <div class="grey darken-3 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px;">
+        <div class="grey darken-4 z-depth-5 row" style="display: inline-block; padding: 32px 48px 0px 48px; opacity: 0.9; border-radius: 4px;">
 
           <form class="col s12" onsubmit="return e()" method="post" action="../php/functions/cadastra-usuario.php" id="cadastro">
             <div class='row'>
@@ -138,7 +138,7 @@
   </div>
   
 
-  <footer class="page-footer grey darken-3">
+  <footer class="page-footer grey darken-3" style="opacity: 0.7; background-image: linear-gradient(-120DEG,#E50914,#221F1F,#221F1F);">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -166,12 +166,6 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
   </footer>
 
 
