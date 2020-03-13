@@ -66,6 +66,7 @@
 
             <div class='row'>
               <div class='input-field col s12'>
+                <input type='hidden' name='pass-hash' id='pass-hash'/>
                 <input class='validate' type='password' name='password' id='password' required/>
                 <label for='password'>Senha</label>
               </div>    

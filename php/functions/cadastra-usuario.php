@@ -7,7 +7,7 @@ include_once('../PHPMailer/PHPMailerAutoload.php');
  $name = $_POST["name"];
  $surname = $_POST["surname"];
  $email = $_POST["email"];
- $password = $_POST["password"];
+ $password = $_POST["pass-hash"];
 
 mysqli_query($mysqli, "INSERT INTO pessoa (name, surname, email, password) VALUES ('$name', '$surname', '$email', '$password')");
 
