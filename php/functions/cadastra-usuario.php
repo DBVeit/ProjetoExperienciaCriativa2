@@ -11,8 +11,6 @@ include_once('../PHPMailer/PHPMailerAutoload.php');
 
 mysqli_query($mysqli, "INSERT INTO pessoa (name, surname, email, password) VALUES ('$name', '$surname', '$email', '$password')");
 
-
-
 date_default_timezone_set('Etc/UTC');
 
 $message = "Por favor clique no link abaixo para confirmar seu cadastro. <br><br> ";

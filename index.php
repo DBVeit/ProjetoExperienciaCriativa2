@@ -19,7 +19,7 @@
   <script src="js/encript.js"></script>
 </head>
 <body>
-  <nav class="grey darken-3 lighten-1" role="navigation">
+  <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Proto 1</a></li>
@@ -31,18 +31,15 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
       
   <main>
     <center>
       <div class="section"></div>
-
       <div class="section"></div>
       <div class="section"></div>
 
       <div class="container ">
-        <div class="grey darken-3 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; ">
+        <div class="grey darken-4 z-depth-5 row mat-form">
 
           <form class="col s12 " onsubmit="return e()" method="post" action="php/functions/autentica-usuario.php" id="cadastro">
             <div class='row'>
@@ -63,7 +60,7 @@
                 <label for='password'>Senha</label>
               </div>
                 <label style='float: right;'>
-								<a class='pink-text' href='pages/esqueci-senha.php'><b>Esqueceu a senha ?</b></a>
+								<a class='pink-text' href='pages/recuperar-senha.php'><b>Esqueceu a senha ?</b></a>
 			    </label>
             </div>
 
@@ -76,68 +73,13 @@
               <a href="pages/cadastro.php">Criar conta</a>
               </div>
             </center>
-              
-                        
-            
           </form>
         </div>
       </div>
       
     </center>
 
-    <div class="section"></div>
-    <div class="section"></div>
   </main>
-      </div>
-      <br><br>
-
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-    
-      <!--   Icon Section   -->
-
-      <div class="row">
-
-      <!--
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-      -->
-        <!--<div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-        -->
-
-        <!--<div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        -->
-        </div>
-      </div>
-
-    </div>
-    <br><br>
-  </div>
-  
 
   <footer class="page-footer grey darken-3">
     <div class="container">
@@ -169,15 +111,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
   </footer>
-
-
-  <!--  Scripts-->
   
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>

@@ -17,25 +17,30 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../js/jquery.md5.js"></script>
   <script src="../js/encript.js"></script>
-  <script src="../js/materialize.js"></script>
-  <script src="../js/init.js"></script>
-  <script>
-    $(document).ready(function () { });
-  </script>
-  
 </head>
+
 <body class="bg-image">
+
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
+
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo" ><i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
+
       <ul class="right hide-on-med-and-down">
+
         <li><a href="#">Proto 1</a></li>
+
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
+
         <li><a href="#">Proto 1</a></li>
+
       </ul>
+
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
     </div>
+
   </nav>
   
   <main>
@@ -43,59 +48,33 @@
       <div class="section"></div>
       <div class="section"></div>
       <div class="section"></div>
-
+      
       <div class="container">
         <div class="grey darken-4 z-depth-5 row mat-form">
-
           <form class="col s12" onsubmit="return e()" method="post" action="../php/functions/cadastra-usuario.php" id="cadastro">
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='name' id='name' autocomplete="off" required/>
-                <label for='name'>Nome</label>
-              </div>
-            </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='text' name='surname' id='surname' autocomplete="off" required/>
-                <label for='surname'>Sobrenome</label>
-              </div>
-            </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' autocomplete="off" required/>
+                <input class='validate' type='email' name='email' id='email' required/>
                 <label for='email'>Email</label>
               </div>
             </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input type='hidden' name='pass-hash' id='pass-hash'/>
-                <input class='validate' type='password' name='password' id='password' autocomplete="off" required/>
-                <label for='password'>Senha</label>
-              </div>              
-            </div>
-            
             <center>
               <div class='row'>
-                <button type='submit'  name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect'>ENVIAR E-MAIL</button>
               </div>
             </center>
           </form>
         </div>
       </div>
-    </center> 
+    </center>
   </main>
- 
+
   <footer class="page-footer grey darken-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
         <h5 class="white-text">Quem somos</h5>
           <p class="grey-text text-lighten-4">Serviço de streaming de vídeos do Youtube ! Super útil</p>
-
-
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
@@ -118,10 +97,8 @@
       </div>
   </footer>
 
-
-  <!--  Scripts-->
-  
-  
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
   
 
   </body>
