@@ -14,9 +14,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+  <script src="js/jquery.js"></script>
   <script src="js/jquery.md5.js"></script>
   <script src="js/encript.js"></script>
+	<script src="js/funcoes.js"></script>
+
 </head>
 <body>
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
@@ -41,7 +44,7 @@
       <div class="container ">
         <div class="grey darken-4 z-depth-5 row mat-form">
 
-          <form class="col s12 " onsubmit="return e()" method="post" action="php/functions/autentica-usuario.php" id="cadastro">
+          <form class="col s12 " //onsubmit="return //e()" //method="post" //action="php/functions/autentica-usuario.php" id="cadastro">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -56,6 +59,7 @@
 
             <div class='row'>
               <div class='input-field col s12'>
+                <input type='hidden' name='pass-hash' id='pass-hash'/>
                 <input class='validate' type='password' name='password' id='password' required />
                 <label for='password'>Senha</label>
               </div>
@@ -67,7 +71,7 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
+                <button //type='submit' id="bLogar" name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
               </div>
               <div class='row'>
               <a href="pages/cadastro.php">Criar conta</a>

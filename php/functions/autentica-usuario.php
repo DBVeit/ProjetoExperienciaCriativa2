@@ -2,7 +2,7 @@
 
 include_once("../conexao.php");
 
-$password = $_POST["password"];
+$password = $_POST["pass-hash"];
 $email = $_POST["email"];
 
 $result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email' AND password='$password'");
@@ -17,7 +17,7 @@ if($row == 1){
 
     header('Location: ../../sucesso.php');
 }else{
-    header('Location: ../../index.php');
+    header('Location: ../../falhou.php');
 }
 
 

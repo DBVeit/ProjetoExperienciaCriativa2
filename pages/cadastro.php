@@ -14,18 +14,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+  <script src="../js/jquery.js"></script>
   <script src="../js/jquery.md5.js"></script>
   <script src="../js/encript.js"></script>
-  <script src="../js/materialize.js"></script>
-  <script src="../js/init.js"></script>
-  <script>
-    $(document).ready(function () { });
-  </script>
-  
+	<script src="../js/funcoes.js"></script>
+
 </head>
-<body class="bg-image">
-  <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
+<body>
+  <nav class="grey darken-3 lighten-1" style="opacity: 0.9; background-image: linear-gradient(-120DEG,#E50914,#221F1F,#221F1F)" role="navigation" >
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo" ><i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Proto 1</a></li>
@@ -45,12 +42,12 @@
       <div class="section"></div>
 
       <div class="container">
-        <div class="grey darken-4 z-depth-5 row mat-form">
+        <div class="grey darken-4 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; opacity: 0.9; border-radius: 3px;">
 
-          <form class="col s12" onsubmit="return e()" method="post" action="../php/functions/cadastra-usuario.php" id="cadastro">
+          <form class="col s12" //onsubmit="return //e()" //method="post" //action="../php/functions/cadastra-usuario.php" id="cadastro">
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='name' id='name' autocomplete="off" required/>
+                <input class='validate' type='text' name='name' id='name' autocomplete="off" required />
                 <label for='name'>Nome</label>
               </div>
             </div>
@@ -74,21 +71,21 @@
                 <input type='hidden' name='pass-hash' id='pass-hash'/>
                 <input class='validate' type='password' name='password' id='password' autocomplete="off" required/>
                 <label for='password'>Senha</label>
-              </div>              
+              </div>            
             </div>
-            
             <center>
               <div class='row'>
-                <button type='submit'  name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
+                <button //type='submit' id="bGravar" name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
               </div>
             </center>
           </form>
         </div>
       </div>
-    </center> 
-  </main>
- 
-  <footer class="page-footer grey darken-3">
+    </center>
+
+  </main> 
+
+  <footer class="page-footer grey darken-3" style="opacity: 0.7; background-image: linear-gradient(-120DEG,#E50914,#221F1F,#221F1F);">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -116,12 +113,13 @@
           </ul>
         </div>
       </div>
+    </div>
   </footer>
-
 
   <!--  Scripts-->
   
-  
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
   
 
   </body>
