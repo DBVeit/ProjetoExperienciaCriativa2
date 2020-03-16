@@ -11,9 +11,9 @@ $user_data = $result->fetch_assoc();
 $row = mysqli_num_rows($result);
 
 if($row == 1){
-
-    $_SESSION['email'] = $email;
-    $_SESSION['name'] = $user_data['name'];
+    $row = 0;
+    //$_SESSION['email'] = $email;
+    //$_SESSION['name'] = $user_data['name'];
 
     header('Location: ../../sucesso.php');
 }else{

@@ -44,7 +44,7 @@
       <div class="container ">
         <div class="grey darken-4 z-depth-5 row mat-form">
 
-          <form class="col s12 " //onsubmit="return //e()" //method="post" //action="php/functions/autentica-usuario.php" id="cadastro">
+          <form class="col s12 " id="cadastro">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -65,13 +65,13 @@
               </div>
                 <label style='float: right;'>
 								<a class='pink-text' href='pages/recuperar-senha.php'><b>Esqueceu a senha ?</b></a>
-			    </label>
+			        </label>
             </div>
 
             <br />
             <center>
               <div class='row'>
-                <button //type='submit' id="bLogar" name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
+                <button id="bLogar" name='btn_login' class='col s12 btn btn-large waves-effect'>ENTRAR</button>
               </div>
               <div class='row'>
               <a href="pages/cadastro.php">Criar conta</a>

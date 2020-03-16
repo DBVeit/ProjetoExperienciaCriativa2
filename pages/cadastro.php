@@ -6,7 +6,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>WatchIt! - Prototype 1</title>
-
     
 
   <!-- CSS  -->
@@ -44,7 +43,7 @@
       <div class="container">
         <div class="grey darken-4 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; opacity: 0.9; border-radius: 3px;">
 
-          <form class="col s12" //onsubmit="return //e()" //method="post" //action="../php/functions/cadastra-usuario.php" id="cadastro">
+          <form class="col s12" id="cadastro">
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='text' name='name' id='name' autocomplete="off" required />
@@ -75,12 +74,19 @@
             </div>
             <center>
               <div class='row'>
-                <button //type='submit' id="bGravar" name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
+                <button  type="button" id="bGravar" name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
               </div>
             </center>
           </form>
         </div>
+        <center>
+            <div style="display: inline-block; padding: 0px 48px 0px 48px;">
+              <table style="color:white; font-size: 30px;" id="returnMessage"></table>
+            </div>
+        </center> 
+
       </div>
+                 
     </center>
 
   </main> 

@@ -1,42 +1,47 @@
 <?php
 
+session_start(
+    //'cookie_lifetime' => 86400,
+    //'read_and_close'  => true,
+);
+
 include_once("../conexao.php");
-include_once("../PHPMailer/class.phpmailer.php");
-include_once('../PHPMailer/PHPMailerAutoload.php');
 
  $name = $_POST["name"];
  $surname = $_POST["surname"];
  $email = $_POST["email"];
  $password = $_POST["pass-hash"];
 
-mysqli_query($mysqli, "INSERT INTO pessoa (name, surname, email, password) VALUES ('$name', '$surname', '$email', '$password')");
+ $_SESSION['email'] = $email;
 
-date_default_timezone_set('Etc/UTC');
 
-$message = "Por favor clique no link abaixo para confirmar seu cadastro. <br><br> ";
-$message .= "http://localhost:8888/ProjetoExperienciaCriativa2/php/functions/confirmar-cadastro.php?email=$email";
 
-$mail= new PHPMailer;
-$mail->IsSMTP();        
-$mail->SMTPDebug = 1;       // 0 = não mostra o debug, 2 = mostra o debug (mensagens de erro)
-$mail->SMTPAuth = true;     // Autenticação ativada
-$mail->SMTPSecure = 'ssl';  
-$mail->Host = 'smtp.gmail.com'; 
-$mail->Port = 465; 
-$mail->Username = 'testexpcri@gmail.com'; // eu sempre usei gmail 
-$mail->Password = 'teste2020';
-$mail->SetFrom('testexpcri@gmail.com', 'Copel+');
-$mail->addAddress('testexpcri@gmail.com','');
-$mail->Subject=("Confirmacao do cadastro no XP criativa");
-$mail->msgHTML($message);
-   
-$mail->send();
-header('Location: ../../index.php');
+$result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email'");
+$result->fetch_assoc();
+
+$row = 0;
+$row = mysqli_num_rows($result);
+
+if($row == 1){
+    $retorno["status"] = "n";
+    $retorno["function"] = "cadastra-usuario";
+    $retorno["message"] = "Já existe um usúario cadastrado nesse e-mail";
+}else if($row == 0){
+
+    $retorno["status"] = "y";
+    $retorno["function"] = "cadastra-usuario";
+    $retorno["message"] = "Foi eviado um e-mail para confirmação do cadastro";
+    $retorno["email"] = $email;
+
+    mysqli_query($mysqli, "INSERT INTO pessoa (name, surname, email, password) VALUES ('$name', '$surname', '$email', '$password')");
+};
+
+echo json_encode($retorno);
+
 
 /*
 email: testexpcri@gmail.com
 senha: teste2020
 */
-
 
 ?>
