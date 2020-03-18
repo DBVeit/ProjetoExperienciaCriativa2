@@ -1,10 +1,8 @@
 $(document).ready(function(){
-
-	validate();	
-
+	
 	fLocalEventosClick();
 
-	hashPass();
+	//hashPass();
 
 });
 
@@ -13,16 +11,29 @@ function fLocalEventosClick(){
 
 	$("#bGravar").click(function(){
 
+		var registro = $("#cadastro")[0].checkValidity();
 
-		hashPass();
-		fLocalComunicaServidor('form', 'cadastra-usuario');
-		return false;
+		if(registro){
+			hashPass();
+			fLocalComunicaServidor('form', '../php/functions/cadastra-usuario.php');
+		}else{
+			$("#cadastro")[0].reportValidity()
+			return false;
+		}
+		
 	});
 	
 	$("#bLogar").click(function(){
-		fLocalComunicaServidor('form', 'autentica-usuario');
-		
-		//return false;
+
+		var login = $("#login")[0].checkValidity();
+
+		if(login){
+			hashPass();
+			fLocalComunicaServidor('form', 'php/functions/autentica-usuario.php');
+		}else{
+			$("#login")[0].reportValidity()
+			return false;
+		}
 	});	
 }
 
@@ -31,10 +42,11 @@ function fLocalComunicaServidor(formulario, file){
 
 	var dados = $("form").serialize();
 
+
 	$.ajax({
 		type: "POST",
 		dataType: "json",
-		url: "../php/functions/"+file+".php",
+		url: ""+file+"",
 		data: dados,
 		success:function(array){
 
@@ -62,10 +74,49 @@ function fLocalComunicaServidor(formulario, file){
 
 					window.location.href = '../php/functions/verificacao-email.php';
 				}
-			}	
+			}
+
+			if(array["function"] == "autentica-usuario"){
+
+				var conteudo_tabela = "";	
+
+				if(array["status"] == "n"){
+
+					conteudo_tabela += "<tr>";
+					conteudo_tabela += "<td>" + array["message"]+"</td>";
+					conteudo_tabela += "</tr>";
+
+					$("#returnMessage").html(conteudo_tabela);
+
+				}else if(array["status"] == "y"){
+
+					conteudo_tabela += "<tr>";
+					conteudo_tabela += "<td>" + array["message"]+"</td>";
+					conteudo_tabela += "</tr>";
+
+					$("#returnMessage").html(conteudo_tabela);
+
+					window.location.href = '../../pages/main.php';
+					
+				}else if (array["status"] == "u"){
+
+					conteudo_tabela += "<tr>";
+					conteudo_tabela += "<td>" + array["message"]+"</td>";
+					conteudo_tabela += "</tr>";
+
+					$("#returnMessage").html(conteudo_tabela);
+				}
+			}
+			
+			
 		}
 	});
 }
+
+
+
+
+
 
 function hashPass(){
 
@@ -78,15 +129,6 @@ function hashPass(){
 	
 }
 
-function validate(){
-	$("#bGravar").click(function () {
 
-		if ($("#cadastro")[0].checkValidity())
-			alert('sucess');
-		else
-			//Validate Form
-			$("#cadastro")[0].reportValidity()
-		});
-}
 
 

@@ -44,7 +44,7 @@
       <div class="container ">
         <div class="grey darken-4 z-depth-5 row mat-form">
 
-          <form class="col s12 " id="cadastro">
+          <form class="col s12 " id="login">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -52,7 +52,7 @@
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' required />
+                <input class='validate' type='email' name='email' id='email' required autocomplete="off" />
                 <label for='email'>Email</label>
               </div>
             </div>
@@ -60,7 +60,7 @@
             <div class='row'>
               <div class='input-field col s12'>
                 <input type='hidden' name='pass-hash' id='pass-hash'/>
-                <input class='validate' type='password' name='password' id='password' required />
+                <input class='validate' type='password' name='password' id='password' required autocomplete="off"/>
                 <label for='password'>Senha</label>
               </div>
                 <label style='float: right;'>
@@ -79,6 +79,11 @@
             </center>
           </form>
         </div>
+        <center>
+            <div style="display: inline-block; padding: 0px 48px 0px 48px;">
+              <table style="color:white; font-size: 30px;" id="returnMessage"></table>
+            </div>
+        </center>
       </div>
       
     </center>
