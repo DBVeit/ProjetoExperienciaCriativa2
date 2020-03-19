@@ -5,7 +5,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>WatchIt! - Prototype 1</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+  <title>WatchIt!</title>
 
     
 
@@ -17,15 +18,22 @@
   <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
   <script src="js/jquery.js"></script>
   <script src="js/jquery.md5.js"></script>
-  <script src="js/encript.js"></script>
 	<script src="js/funcoes.js"></script>
 
 </head>
 <body>
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Proto 1</a></li>
+        <li><a href="#">Teste</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Teste</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Teste</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -95,25 +103,25 @@
       <div class="row">
         <div class="col l6 s12">
         <h5 class="white-text">Quem somos</h5>
-          <p class="grey-text text-lighten-4">Serviço de Streaming de vídeos do Youtube ! super útil</p>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam dui vel sem tempor, vehicula suscipit massa luctus. Nunc feugiat mauris vel orci ultrices, ut.</p>
 
 
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+          <li><a class="white-text" href="#!">Lorem</a></li>
+            <li><a class="white-text" href="#!">Ipsum</a></li>
+            <li><a class="white-text" href="#!">Dolor</a></li>
+            <li><a class="white-text" href="#!">Amet</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!"><i style="font-size: 35px; padding: 0px 10px 7px 0px;"class="fab fa-facebook"></i></a>
+            <li><a class="white-text" href="#!"><i class="fab fa-facebook footer-icon"></i></a>
             <a class="white-text" href="#!"><i style="font-size: 35px;"class="fab fa-instagram"></i></a></li>
-            <li><a class="white-text" href="#!"><i style="font-size: 35px; padding: 0px 10px 7px 0px;"class="fab fa-twitter"></i></a>
+            <li><a class="white-text" href="#!"><i class="fab fa-twitter footer-icon"></i></a>
             <a class="white-text" href="#!"><i style="font-size: 32px;"class="fab fa-google"></i></a></li>
             
           </ul>
