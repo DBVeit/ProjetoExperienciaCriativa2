@@ -38,6 +38,7 @@
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Menu</a></li>
       </ul>
+
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
@@ -80,6 +81,14 @@
                 <label for='password'>Senha</label>
               </div>            
             </div>
+
+            <!--<div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='confirm_password' id='confirm_password' autocomplete="off" required/>
+                <label for='confirm_password'>Confirmação de Senha</label>
+                
+              </div>            
+            </div>-->
             <center>
               <div class='row'>
                 <button  type="button" id="bGravar" name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
@@ -90,6 +99,7 @@
         <center>
             <div style="display: inline-block; padding: 0px 48px 0px 48px;">
               <table style="color:white; font-size: 30px;" id="returnMessage"></table>
+              <!--<span id='message'></span>-->
             </div>
         </center> 
 

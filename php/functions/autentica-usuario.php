@@ -25,7 +25,7 @@ if($row == 1 && $rowTwo == 1){
 
     $retorno["status"] = "n";
     $retorno["function"] = "autentica-usuario";
-    $retorno["message"] = "Valide seu cadastro por e-mail !";
+    $retorno["message"] = "Valide seu cadastro por e-mail ! ";
 
     //header('Location: ../../nao-autenticado.php');
 }else{

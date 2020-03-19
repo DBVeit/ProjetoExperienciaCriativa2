@@ -23,23 +23,8 @@
 </head>
 <body>
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Teste</a></li>
-      </ul>
-
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Teste</a></li>
-      </ul>
-
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Teste</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Proto 1</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <div class="nav-wrapper container">
+    <a id="logo-container" href="index.php" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a> 
     </div>
   </nav>
       

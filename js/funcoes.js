@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+	//passConfirmation();
 	fLocalEventosClick();
 
 	//hashPass();
@@ -90,11 +91,11 @@ function fLocalComunicaServidor(formulario, file){
 
 				}else if(array["status"] == "y"){
 
-					conteudo_tabela += "<tr>";
+					/*conteudo_tabela += "<tr>";
 					conteudo_tabela += "<td>" + array["message"]+"</td>";
 					conteudo_tabela += "</tr>";
 
-					$("#returnMessage").html(conteudo_tabela);
+					$("#returnMessage").html(conteudo_tabela);*/
 
 					window.location.href = '../../pages/main.php';
 					
@@ -129,6 +130,15 @@ function hashPass(){
 	
 }
 
+/*function passConfirmation(){
+
+		$('#password, #confirm_password').on('keyup', function () {
+		if ($('#password').val() == $('#confirm_password').val()) {
+		  $('#message').html('Iguais').css('color', 'green');
+		} else 
+		  $('#message').html('Diferentes').css('color', 'red');
+	  });
+}*/
 
 
 

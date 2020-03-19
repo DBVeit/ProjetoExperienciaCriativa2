@@ -26,10 +26,10 @@ function sendMsg(){
     $mail->SMTPSecure = 'ssl';  
     $mail->Host = 'smtp.gmail.com'; 
     $mail->Port = 465; 
-    $mail->Username = 'testexpcri@gmail.com'; // eu sempre usei gmail 
+    $mail->Username = 'testexpcri@gmail.com'; 
     $mail->Password = 'teste2020';
-    $mail->SetFrom('testexpcri@gmail.com', 'Copel+');
-    $mail->addAddress('testexpcri@gmail.com','');
+    $mail->SetFrom('testexpcri@gmail.com', 'Confirmacao de Cadastro');
+    $mail->addAddress($email,'');
     $mail->Subject=("Confirmacao do cadastro no XP criativa");
     $mail->msgHTML($message);
 
