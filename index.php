@@ -1,11 +1,14 @@
-<?php?>
+<?php
+include_once("php/conexao.php");
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>WatchIt! - Prototype 1</title>
+  <title>WatchIt!</title>
 
     
 
@@ -42,6 +45,18 @@
         <div class="grey darken-4 z-depth-5 row mat-form">
 
           <form class="col s12 " onsubmit="return e()" method="post" action="php/functions/autentica-usuario.php" id="cadastro">
+            <?php if(isset($_SESSION['nao_autenticado'])):?>
+              <a style="font-size: 15px; color: red;">Dados inválidos!</a>
+            <?php
+              endif;
+              unset($_SESSION['nao_autenticado']);
+            ?>
+            <?php if(isset($_SESSION['nao_confirmado'])):?>
+              <a style="font-size: 15px; color: red;">Usuário não confirmado!<br>Verifique seu email e tente novamente</a>
+            <?php
+              endif;
+              unset($_SESSION['nao_confirmado']);
+            ?>
             <div class='row'>
               <div class='col s12'>
               </div>
