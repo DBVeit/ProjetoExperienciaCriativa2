@@ -1,4 +1,4 @@
-CREATE TABLE filmes (
+CREATE TABLE projeto.filmes (
   id int NOT NULL AUTO_INCREMENT,
   titulo VARCHAR (60),
   genero VARCHAR (30),
