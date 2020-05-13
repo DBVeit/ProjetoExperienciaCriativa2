@@ -3,10 +3,48 @@ $(document).ready(function(){
 	//passConfirmation();
 	fLocalEventosClick();
 
+	
+	if($('body').is('.displayMovie')){
+		fLocalDisplay();
+	}
+	  
 	//hashPass();
 
 });
 
+function fLocalDisplay(){
+	alert("listar"); // alert para saber se está sendo chamado
+
+    $.ajax({
+
+		//type: "POST",
+		dataType: "json",
+		url: "../php/functions/lista-filmes.php",
+		//data: dados,
+        success: function (array) {
+			
+			var conteudo_tabela = "";
+
+			console.log(array["filme"].length);
+			console.log(array["filme"]);
+
+
+			for(var i = 0; i < array["filme"].length; i++){
+				
+
+				conteudo_tabela += "<tr>";
+				conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "</td>";
+				conteudo_tabela += "<td>" + array["filme"][i]["info"] + "</td>";
+				conteudo_tabela += "<td>" + array["filme"][i]["link"] + "</td>";
+				conteudo_tabela += "</tr>";
+
+			}
+
+            $("#returnMessage").html(conteudo_tabela);
+        }
+    }); 
+
+}
 
 function fLocalEventosClick(){
 
@@ -39,10 +77,10 @@ function fLocalEventosClick(){
 }
 
 
-function fLocalComunicaServidor(formulario, file){
+
+function fLocalComunicaServidor(formulario, file){ //se bugar remover ="form"
 
 	var dados = $("form").serialize();
-
 
 	$.ajax({
 		type: "POST",
