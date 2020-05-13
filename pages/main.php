@@ -1,4 +1,10 @@
-<?php?>
+<?php
+session_start();
+$dados_usuario=$_SESSION['name'];
+include_once("../php/conexao.php");
+$result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$dados_usuario'");
+$row = $result->fetch_assoc();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
