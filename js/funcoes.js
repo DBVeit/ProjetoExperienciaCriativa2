@@ -97,7 +97,7 @@ function fLocalComunicaServidor(formulario, file){
 
 					$("#returnMessage").html(conteudo_tabela);*/
 
-					window.location.href = '../../pages/main.php';
+					window.location.href = 'pages/main.php';
 					
 				}else if (array["status"] == "u"){
 
