@@ -135,7 +135,7 @@ function fLocalComunicaServidor(formulario, file){ //se bugar remover ="form"
 
 					$("#returnMessage").html(conteudo_tabela);*/
 
-					window.location.href = '../../pages/main.php';
+					window.location.href = 'pages/main.php';
 					
 				}else if (array["status"] == "u"){
 
