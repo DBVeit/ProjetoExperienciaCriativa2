@@ -21,6 +21,7 @@ if($row == 1 && $rowTwo == 1){
     $retorno["message"] = "Usúario autenticado !";
 
     $_SESSION['name'] = $email;
+    $_SESSION['password'] = $password;
  
     //header('Location: ../../autenticado.php');
 }else if($row == 1 && $rowTwo == 0){
@@ -34,6 +35,8 @@ if($row == 1 && $rowTwo == 1){
     $retorno["status"] = "u";
     $retorno["function"] = "autentica-usuario";
     $retorno["message"] = "Dados incorretos ou usúario não cadastrado !";
+    
+    
     //header('Location: ../../usuario-incorreto-ou-nao-cadastrado.php');
 }
 
