@@ -27,7 +27,7 @@ include_once("php/conexao.php");
     <div class="nav-wrapper container">
       <a id="logo-container" href="index.php" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a> 
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Ver Títulos Disponíveis</a></li>
+        <li><a href="pages/catalogo-geral.php">Catálogo</a></li>
       </ul>
     </div>
   </nav>
@@ -125,6 +125,5 @@ include_once("php/conexao.php");
 
   </body>
 </html>
-
 
 
