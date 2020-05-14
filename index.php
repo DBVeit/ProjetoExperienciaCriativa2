@@ -11,8 +11,6 @@ include_once("php/conexao.php");
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
   <title>WatchIt!</title>
 
-    
-
   <!-- CSS  -->
   <link rel="stylesheet" href="css/all.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,12 +20,15 @@ include_once("php/conexao.php");
   <script src="js/jquery.js"></script>
   <script src="js/jquery.md5.js"></script>
 	<script src="js/funcoes.js"></script>
-
 </head>
+
 <body>
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
     <div class="nav-wrapper container">
-    <a id="logo-container" href="index.php" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a> 
+      <a id="logo-container" href="index.php" class="brand-logo"><i class="material-icons" style="font-size: 39px;">play_circle_filled</i> WatchIt!</a> 
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Ver Títulos Disponíveis</a></li>
+      </ul>
     </div>
   </nav>
       
@@ -124,5 +125,6 @@ include_once("php/conexao.php");
 
   </body>
 </html>
+
 
 
