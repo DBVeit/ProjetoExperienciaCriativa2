@@ -2,7 +2,7 @@
 
 include_once("../conexao.php");
 
-$result = mysqli_query($mysqli, "SELECT * FROM filmes ORDER BY movie_id DESC LIMIT 10");
+$result = mysqli_query($mysqli, "SELECT * FROM filmes ORDER BY movie_id DESC LIMIT 2");
 
 $i = 0;
 

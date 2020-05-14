@@ -66,7 +66,7 @@ div.desc {
 
 </head>
 
-<body class="displayMovie">
+<body class="displayFav">
 
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>

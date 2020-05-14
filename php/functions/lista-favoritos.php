@@ -1,12 +1,16 @@
 <?php
 session_start();
 include_once("../conexao.php");
+
 $dados_usuario = $_SESSION['name'];
 $result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$dados_usuario'");
 $row = $result->fetch_assoc();
 $id_user = $row['id_user'];
+$id = $_SESSION['id'];
 
-$result_movies = mysqli_query($mysqli, "SELECT * FROM filmes WHERE favoritos.id_user='$id_user' ORDER BY movie_id DESC LIMIT 10");
+
+$result_movies = mysqli_query($mysqli, "SELECT * FROM filmes where movie_id in (select movie_id from favoritos where id_user = $id)");
+
 
 $i = 0;
 

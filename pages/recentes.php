@@ -5,6 +5,7 @@ $dados_usuario = $_SESSION['name'];
 
 include_once("../php/conexao.php");
 include_once("../php/functions/verifica-login.php");
+
 $result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$dados_usuario'");
 $row = $result->fetch_assoc();
 $_SESSION['id'] = $row['id_user'];
@@ -66,7 +67,7 @@ div.desc {
 
 </head>
 
-<body class="displayMovie">
+<body class="displayMovieRecent">
 
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>

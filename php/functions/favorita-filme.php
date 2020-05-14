@@ -31,8 +31,6 @@ include_once("../conexao.php");
     }
  
  
-
- 
  //echo $id;
 
  //$_SESSION['email'] = $email;
