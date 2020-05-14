@@ -106,7 +106,10 @@ div.desc {
         <a href="" style="color: white;"><i class="white-text material-icons" style="margin-right: -100px;">search</i>Buscar Título</a>
       </li>
       <li class="navButtons">
-        <a href="" style="color: white;">Favoritos</a>
+        <a href="favoritos.php" style="color: white;">Favoritos</a>
+      </li>
+      <li class="navButtons">
+        <a href="recentes.php" style="color: white;">Adições Recentes</a>
       </li>
       <li class="navButtons">
         <a href="" style="color: white;">Alterar Plano</a>
