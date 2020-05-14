@@ -31,13 +31,23 @@ function fLocalDisplay(){
 
 			for(var i = 0; i < array["filme"].length; i++){
 				
-
+				
 				conteudo_tabela += "<tr>";
-				conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "</td>";
-				conteudo_tabela += "<td>" + array["filme"][i]["info"] + "</td>";
 				conteudo_tabela += "<td>" + array["filme"][i]["link"] + "</td>";
+				conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br><label><input type='checkbox' id='"+ array["filme"][i]["id"] + "' value='"+ array["filme"][i]["id"] +"' name='filmes' /><span>Favorito</span></label></td>";
+				//conteudo_tabela += "<td>" + array["filme"][i]["info"] + "</td>";	
 				conteudo_tabela += "</tr>";
 
+
+				 /*<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  				<label for="vehicle1"> I have a bike</label><br></br>*/
+
+				  /*<label>
+				  <input type="checkbox" />
+				  <span>Red</span>
+				</label>*/
+				
+				
 			}
 
             $("#returnMessage").html(conteudo_tabela);
@@ -73,7 +83,13 @@ function fLocalEventosClick(){
 			$("#login")[0].reportValidity()
 			return false;
 		}
-	});	
+	});
+	
+	$("#bFavoritar").click(function(){
+
+			fLocalComunicaServidor('form', '../php/functions/favorita-filme.php');
+		
+	});
 }
 
 
@@ -81,6 +97,7 @@ function fLocalEventosClick(){
 function fLocalComunicaServidor(formulario, file){ //se bugar remover ="form"
 
 	var dados = $("form").serialize();
+	alert(dados);
 
 	$.ajax({
 		type: "POST",

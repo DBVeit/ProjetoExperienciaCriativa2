@@ -19,8 +19,9 @@ if($row == 1 && $rowTwo == 1){
     $retorno["status"] = "y";
     $retorno["function"] = "autentica-usuario";
     $retorno["message"] = "Usúario autenticado !";
+
     $_SESSION['name'] = $email;
-    
+ 
     //header('Location: ../../autenticado.php');
 }else if($row == 1 && $rowTwo == 0){
 

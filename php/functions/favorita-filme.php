@@ -5,14 +5,39 @@ session_start(
     //'read_and_close'  => true,
 );
 
+$dados_usuario = $_SESSION['name'];
+$id = $_SESSION['id'];
+
+//echo $dados_usuario;
+//echo $id;
+
+
 include_once("../conexao.php");
 
- $name = $_POST["name"];
- $surname = $_POST["surname"];
- $email = $_POST["email"];
- $password = $_POST["pass-hash"];
 
- $_SESSION['email'] = $email;
+    $_POST['filmes'] = explode(',',$_POST['filmes']);
+
+    foreach($_POST['filmes']as $filme){
+
+    $filme = trim($filme);
+
+    //echo $filme;
+    print_r ($filme);
+
+    //mysqli_query($mysqli, "INSERT INTO favoritos (id_user,movie_id) VALUES ('$id','$filme')"); FUNCIONOU
+
+    mysqli_query($mysqli, "INSERT INTO favoritos (id_user,movie_id) VALUES ('$id','$filme')");
+
+    }
+ 
+ 
+
+ 
+ //echo $id;
+
+ //$_SESSION['email'] = $email;
+
+/*
 
 $result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email'");
 $result->fetch_assoc();
@@ -37,9 +62,10 @@ if($row == 1){
 echo json_encode($retorno);
 
 
-/*
+
 email: testexpcri@gmail.com
 senha: teste2020
+
 */
 
 ?>
