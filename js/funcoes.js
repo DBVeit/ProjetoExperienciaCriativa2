@@ -155,6 +155,20 @@ function fLocalDisplayRecent(){
 
 function fLocalEventosClick(){
 
+
+	$("#bCadastrar").click(function(){
+
+		var registro = $("#cadastro")[0].checkValidity();
+
+		if(registro){
+			fLocalComunicaServidor('form', '../php/functions/cadastra-filme.php');
+		}else{
+			$("#cadastro")[0].reportValidity()
+			return false;
+		}
+		
+	});
+
 	$("#bGravar").click(function(){
 
 		var registro = $("#cadastro")[0].checkValidity();
@@ -202,6 +216,32 @@ function fLocalComunicaServidor(formulario, file){ //se bugar remover ="form"
 		url: ""+file+"",
 		data: dados,
 		success:function(array){
+
+			if(array["function"] == "cadastra-filme"){
+
+				var conteudo_tabela = "";	
+
+				if(array["status"] == "n"){
+
+					//document.getElementById('email').value = '';	
+
+					conteudo_tabela += "<tr>";
+					conteudo_tabela += "<td>" + array["message"]+"</td>";
+					conteudo_tabela += "</tr>";
+
+					$("#returnMessage").html(conteudo_tabela);
+
+				}else if(array["status"] == "y"){
+
+					conteudo_tabela += "<tr>";
+					conteudo_tabela += "<td>" + array["message"]+"</td>";
+					conteudo_tabela += "</tr>";
+
+					$("#returnMessage").html(conteudo_tabela);
+
+					//window.location.href = '../php/functions/verificacao-email.php';
+				}
+			}
 
 			if(array["function"] == "cadastra-usuario"){
 

@@ -57,49 +57,49 @@ session_start();
           <form class="col s12" id="cadastro" enctype="multipart/form-data">
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='name' id='name' autocomplete="off" required />
-                <label for='name'>Titulo</label>
+                <input class='validate' type='text' name='title' id='title' autocomplete="off" required />
+                <label for='title'>Titulo</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='surname' id='surname' autocomplete="off" required/>
-                <label for='surname'>Ano</label>
+                <input class='validate' type='text' name='year' id='year' autocomplete="off" required/>
+                <label for='year'>Ano</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' autocomplete="off" required/>
+                <input class='validate' type='text' name='description' id='description' autocomplete="off" required/>
                 <label for='email'>Descrição</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' autocomplete="off" required/>
-                <label for='email'>Gênero</label>
+                <input class='validate' type='text' name='genre' id='genre' autocomplete="off" required/>
+                <label for='genre'>Gênero</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' autocomplete="off" required/>
-                <label for='email'>Link</label>
+                <input class='validate' type='text' name='link' id='link' autocomplete="off" required/>
+                <label for='link'>Link</label>
               </div>
             </div>
 
-            <div class='row'>
+            <!--<div class='row'>
               <div class='input-field col s12'>     
                 <input class='validate' type='file' name='image' id='image'  autocomplete="off" required/>
               </div>
               <label for='image'>Capa</label>
-            </div>
+            </div>-->
         
             <center>
               <div class='row'>
-                <button  type="button" id="bGravar" name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
+                <button  type="button" id="bCadastrar" name='btn_login' class='col s12 btn btn-large waves-effect'>CADASTRAR</button>
               </div>
             </center>
           </form>
