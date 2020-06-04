@@ -1,5 +1,7 @@
 <?php
 session_start();
+include_once("../php/functions/verifica-login-admin.php");
+
 ?>
 
 <!DOCTYPE html>

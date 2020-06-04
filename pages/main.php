@@ -2,7 +2,6 @@
 
 session_start();
 $dados_usuario = $_SESSION['name'];
-
 include_once("../php/conexao.php");
 include_once("../php/functions/verifica-login.php");
 $result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$dados_usuario'");
@@ -96,6 +95,7 @@ div.desc {
         <a href="#user"><i class="large material-icons">account_circle</i></a><br>
         <a href="#name"><span class="white-text name"><?php echo $row['name']; ?></span></a><br>
         <a href="#email"><span class="white-text email"><?php echo $_SESSION['name']; ?></span></a>
+        
         <!--<a href="#id"><span class="white-text id"><?php //echo $row['id_user']; ?></span></a>
         <a href="#id"><span class="white-text id"><?php //echo $_SESSION['id']; ?></span></a>-->
       </div>

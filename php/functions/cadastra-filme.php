@@ -7,20 +7,17 @@
 
 include_once("../conexao.php");
 
- $title = $_POST["title"];
- $year = $_POST["year"];
- $info = $_POST["description"];
- $genre = $_POST["genre"];
- $link = $_POST["link"];
+$title = $_POST["title"];
+$year = $_POST["year"];
+$info = $_POST["description"];
+$genre = $_POST["genre"];
+$link = $_POST["link"];
 
- $concat_link = "<iframe width='560' height='315' src='https://www.youtube.com/embed/" .$link. "' frameborder='0'></iframe>";
+$concat_link = "<iframe width='560' height='315' src='https://www.youtube.com/embed/" .$link. "' frameborder='0'></iframe>";
  
 $concat_link = mysqli_real_escape_string($mysqli, $concat_link);
  
- var_dump($concat_link);
- var_dump($year);
- var_dump($info);
- var_dump($genre);
+
  
 //$password = $_POST["pass-hash"];
 

@@ -7,9 +7,11 @@ $email = $_POST["email"];
 
 $result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email' AND password='$password'");
 $resultTwo = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email' AND password='$password' AND confirmacao= 1 ");
+$tipo = mysqli_query($mysqli, "SELECT tipo FROM pessoa WHERE email='$email' AND password='$password' AND confirmacao= 1 ");
 
 $result->fetch_assoc();
 $resultTwo->fetch_assoc();
+$tipo->fetch_assoc();
 
 $row = mysqli_num_rows($result);
 $rowTwo = mysqli_num_rows($resultTwo);
@@ -21,7 +23,8 @@ if($row == 1 && $rowTwo == 1){
     $retorno["message"] = "Usúario autenticado !";
 
     $_SESSION['name'] = $email;
- 
+    $_SESSION['tipo'] = $tipo;
+
     //header('Location: ../../autenticado.php');
 }else if($row == 1 && $rowTwo == 0){
 
