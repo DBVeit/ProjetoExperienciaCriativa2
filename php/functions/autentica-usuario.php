@@ -7,16 +7,25 @@ $email = $_POST["email"];
 
 $result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email' AND password='$password'");
 $resultTwo = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email' AND password='$password' AND confirmacao= 1 ");
-$tipo = mysqli_query($mysqli, "SELECT tipo FROM pessoa WHERE email='$email' AND password='$password' AND confirmacao= 1 ");
+$admin = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$email' AND password='$password' AND tipo= 1 ");
 
 $result->fetch_assoc();
 $resultTwo->fetch_assoc();
-$tipo->fetch_assoc();
+$admin->fetch_assoc();
 
 $row = mysqli_num_rows($result);
 $rowTwo = mysqli_num_rows($resultTwo);
+$admin = mysqli_num_rows($admin);
 
-if($row == 1 && $rowTwo == 1){
+if($row == 1 && $rowTwo == 1 && $admin == 1){
+
+    $retorno["status"] = "y";
+    $retorno["function"] = "autentica-usuario";
+    $retorno["message"] = "Admin Autenticado !";
+
+    $_SESSION['name'] = $email;
+    $_SESSION['tipo'] = 1;
+}else if($row == 1 && $rowTwo == 1){
     
     $retorno["status"] = "y";
     $retorno["function"] = "autentica-usuario";

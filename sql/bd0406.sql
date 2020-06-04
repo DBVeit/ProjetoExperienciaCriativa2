@@ -5,7 +5,7 @@ drop table if exists filmes;
 
 create table pessoa(
 	id_user int auto_increment,
-    tipo boolean default 0,
+    tipo int default 0,
 	name varchar(45) not null,
     surname varchar(45) not null,
     email varchar(45) not null unique,
@@ -35,7 +35,7 @@ create table favoritos (
 
 
 update pessoa set confirmacao = 1 where id_user = 1;
-update pessoa set tipo = 0 where id_user = 1; 
+update pessoa set tipo = 1 where id_user = 1; 
 
 
 /*
