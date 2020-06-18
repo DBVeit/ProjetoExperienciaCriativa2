@@ -81,17 +81,26 @@ div.desc {
     <div class="nav-wrapper container">
       <a id="logo-container" href="../index.php" class="brand-logo">
         <i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="favoritos.php">Favoritos</a></li>
-      </ul>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="recentes.php">Recentes</a></li>
-      </ul>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="cadastro-filme.php">Cadastrar Filme</a></li>
-      </ul>
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Menu</a></li>
+
+        
+      
+
+        <?php
+              if(isset($_SESSION['id'])){
+                echo "<ul class='right hide-on-med-and-down'>
+                <li><a href='favoritos.php'>Favoritos</a></li>
+              </ul>
+              <ul class='right hide-on-med-and-down'>
+                <li><a href='recentes.php'>Recentes</a></li>
+              </ul>
+              <ul class='right hide-on-med-and-down'>
+                <li><a href='cadastro-filme.php'>Cadastrar Filme</a></li>
+              </ul>
+              <ul id='nav-mobile' class='sidenav'>
+                <li><a href='#'>Menu</a></li>";
+              }
+        ?>
+
       </ul>
     </div>
 

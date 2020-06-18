@@ -35,8 +35,6 @@ create table favoritos (
 ); 
 
 
-
-
 update pessoa set confirmacao = 1 where id_user = 1;
 update pessoa set tipo = 1 where id_user = 1; 
 
