@@ -104,8 +104,7 @@ div.desc {
         <a href="#name"><span class="white-text name"><?php echo $row['name']; ?></span></a><br>
         <a href="#email"><span class="white-text email"><?php echo $_SESSION['name']; ?></span></a>
         
-        <!--<a href="#id"><span class="white-text id"><?php //echo $row['id_user']; ?></span></a>
-        <a href="#id"><span class="white-text id"><?php //echo $_SESSION['id']; ?></span></a>-->
+        
       </div>
     </li>
     <br>
@@ -144,9 +143,17 @@ div.desc {
               <table style="color:white; font-size: 16px;" id="returnMessage">
             </table>
             </div>
-            <button  type="button" id="bFavoritar" name='btn_login' class='col s12 m4 l8 btn btn-large waves-effect'>
-              Salvar
-            </button>
+            
+
+            <?php
+              if(isset($_SESSION['id'])){
+                echo "<button  type='button' id='bFavoritar' name='btn_login' class='col s12 m4 l8 btn btn-large waves-effect'>
+                Salvar
+              </button>";
+              }
+            ?>
+
+
           </form>
         </center>
       </div>

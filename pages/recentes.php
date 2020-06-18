@@ -76,13 +76,13 @@ div.desc {
       <a id="logo-container" href="../index.php" class="brand-logo">
         <i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Favoritos</a></li>
+        <li><a href="favoritos.php">Favoritos</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Cadastrar Filme</a></li>
+        <li><a href="cadastro-filme.php">Cadastrar Filme</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Catálogo</a></li>
+        <li><a href="catalogo-geral.php">Catálogo</a></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Menu</a></li>
@@ -139,9 +139,7 @@ div.desc {
             <div style="display: inline-block; padding: 0px 48px 0px 48px;">
               <table style="color:white; font-size: 16px;" id="returnMessage"></table>
             </div>
-            <button  type="button" id="bFavoritar" name='btn_login' class='col s12 m4 l8 btn btn-large waves-effect'>
-              Salvar
-            </button>
+           
           </form>
         </center>
       </div>

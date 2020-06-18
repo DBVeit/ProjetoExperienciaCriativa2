@@ -19,6 +19,7 @@ while($registro = mysqli_fetch_assoc($result_movies)){
     $retorno["filme"][$i]["titulo"] = $registro['titulo'];
     $retorno["filme"][$i]["info"] = $registro['info'];
     $retorno["filme"][$i]["link"] = $registro['link'];
+    $retorno["filme"][$i]["year"] = $registro['year_release'];
     $retorno["filme"][$i]["id"] = $registro['movie_id'];
 
     $i++;
