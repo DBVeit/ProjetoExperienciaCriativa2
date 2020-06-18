@@ -76,13 +76,13 @@ div.desc {
       <a id="logo-container" href="../index.php" class="brand-logo">
         <i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Teste</a></li>
+        <li><a href="#">Favoritos</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Teste</a></li>
+        <li><a href="#">Cadastrar Filme</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Teste</a></li>
+        <li><a href="#">Catálogo</a></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Menu</a></li>

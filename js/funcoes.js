@@ -73,7 +73,7 @@ function fLocalDisplay(){
 }
 
 function fLocalDisplayFav(){
-	alert("listar"); // alert para saber se está sendo chamado
+	//alert("listar"); // alert para saber se está sendo chamado
 
     $.ajax({
 
@@ -312,10 +312,6 @@ function fLocalComunicaServidor(formulario, file){ //se bugar remover ="form"
 		}
 	});
 }
-
-
-
-
 
 
 function hashPass(){

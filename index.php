@@ -1,6 +1,14 @@
 <?php
 session_start();
 include_once("php/conexao.php");
+
+$dados_usuario = $_SESSION['name'];
+
+include_once("php/functions/verifica-login-index.php");
+
+$result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$dados_usuario'");
+$row = $result->fetch_assoc();
+$_SESSION['id'] = $row['id_user'];
 ?>
 
 <!DOCTYPE html>

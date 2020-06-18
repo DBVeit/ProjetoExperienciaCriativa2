@@ -35,6 +35,7 @@ if(isset($_SESSION['id']))
         $retorno["filme"][$i]["titulo"] = $registro['titulo'];
         $retorno["filme"][$i]["info"] = $registro['info'];
         $retorno["filme"][$i]["thumb"] = $registro['thumb'];
+        $retorno["filme"][$i]["year"] = $registro['year_release'];
         $retorno["filme"][$i]["id"] = $registro['movie_id'];
     
         $i++;
