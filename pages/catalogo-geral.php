@@ -142,7 +142,6 @@ div.desc {
           <form action="#">
             <div style="display: inline-block; padding: 0px 48px 0px 48px;">
               <table style="color:white; font-size: 16px;" id="returnMessage">
-              
             </table>
             </div>
             <button  type="button" id="bFavoritar" name='btn_login' class='col s12 m4 l8 btn btn-large waves-effect'>

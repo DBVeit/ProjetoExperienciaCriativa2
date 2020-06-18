@@ -51,10 +51,11 @@ function fLocalDisplay(){
 						conteudo_tabela += "<td>" + array["filme"][i]["thumb"] + "</td>";
 					}
 
+
 					if(array["filme"][0]["auth"] == "usuario"){
-						conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br><label><input type='checkbox' id='"+ array["filme"][i]["id"] + "' value='"+ array["filme"][i]["id"] +"' name='filmes' /><span>Favorito</span></label></td>";
+						conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br>" + array["filme"][i]["year"] + "<br> <label> <input type='checkbox' id='" + array["filme"][i]["id"] + "' value='" + array["filme"][i]["id"] +"' name='filmes' /> <span> Favorito </span> </label> </td>";
 					}else{
-						conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br>" + array["filme"][i]["id"] +" </td>";
+						conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br>" + array["filme"][i]["year"] + "<br>" + array["filme"][i]["id"] +"</td>";
 					}
 					
 					conteudo_tabela += "</tr>";
