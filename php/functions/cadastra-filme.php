@@ -14,8 +14,10 @@ $genre = $_POST["genre"];
 $link = $_POST["link"];
 
 $concat_link = "<iframe width='560' height='315' src='https://www.youtube.com/embed/" .$link. "' frameborder='0'></iframe>";
- 
+$concat_thumb="<img src='http://i3.ytimg.com/vi/" .$link. "/hqdefault.jpg'>";
+
 $concat_link = mysqli_real_escape_string($mysqli, $concat_link);
+$concat_thumb = mysqli_real_escape_string($mysqli, $concat_thumb);
  
 
  
@@ -41,7 +43,7 @@ if($row == 1){
     $retorno["function"] = "cadastra-filme";
     $retorno["message"] = "Filme cadastrado com sucesso";
 
-    $rv = mysqli_query($mysqli, "INSERT INTO filmes (titulo, info, link, year_release, genre) VALUES ('$title','$info','$concat_link','$year','$genre')");
+    $rv = mysqli_query($mysqli, "INSERT INTO filmes (titulo, info, link,thumb, year_release, genre) VALUES ('$title','$info','$concat_link','$concat_thumb','$year','$genre')");
     if ( $rv === false ){
         echo("deu erro");
    }

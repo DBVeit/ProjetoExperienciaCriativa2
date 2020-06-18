@@ -1,3 +1,22 @@
+<?php
+
+session_start();
+$dados_usuario = $_SESSION['name'];
+include_once("../php/conexao.php");
+//include_once("../php/functions/verifica-login.php");
+$result = mysqli_query($mysqli, "SELECT * FROM pessoa WHERE email='$dados_usuario'");
+$row = $result->fetch_assoc();
+$_SESSION['id'] = $row['id_user'];
+
+//$guest = $_SESSION['id'];
+//$id = 0;
+
+//if(empty($guest)){
+ // $id = 1;
+//}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +73,7 @@ div.desc {
 
 </head>
 
-<body class="displayMovie">
+<body class="displayMovie" >
 
   <nav class="grey darken-3 lighten-1 mat-header" role="navigation">
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
@@ -63,13 +82,13 @@ div.desc {
       <a id="logo-container" href="../index.php" class="brand-logo">
         <i class="material-icons" style="font-size: 39px;">play_circle_filled</i>WatchIt!</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#"></a></li>
+        <li><a href="#">Teste</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#"></a></li>
+        <li><a href="#">Teste</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#"></a></li>
+        <li><a href="#">Teste</a></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Menu</a></li>
@@ -77,17 +96,37 @@ div.desc {
     </div>
 
   </nav>
-
+  
   <ul id="slide-out" class="sidenav" style="background-color: #181a19;">
-    <div align="center" style=" margin-top: 50px;">
+    <li>
+      <div class="slide-out" class="sidenav" align="center">
+        <a href="#user"><i class="large material-icons">account_circle</i></a><br>
+        <a href="#name"><span class="white-text name"><?php echo $row['name']; ?></span></a><br>
+        <a href="#email"><span class="white-text email"><?php echo $_SESSION['name']; ?></span></a>
+        
+        <!--<a href="#id"><span class="white-text id"><?php //echo $row['id_user']; ?></span></a>
+        <a href="#id"><span class="white-text id"><?php //echo $_SESSION['id']; ?></span></a>-->
+      </div>
+    </li>
+    <br>
+    <div align="center">
       <li class="navButtons">
-        <a href="../index.php" style="color: white;">Entrar</a>
+        <a href="" style="color: white;"><i class="white-text material-icons" style="margin-right: -100px;">search</i>Buscar Título</a>
       </li>
       <li class="navButtons">
-        <a href="cadastro.php" style="color: white;">Criar Conta</a>
+        <a href="favoritos.php" style="color: white;">Favoritos</a>
       </li>
       <li class="navButtons">
-        <a href="recuperar-senha.php" style="color: white;">Esqueceu a senha?</a>
+        <a href="recentes.php" style="color: white;">Adições Recentes</a>
+      </li>
+      <li class="navButtons">
+        <a href="" style="color: white;">Alterar Plano</a>
+      </li>
+      <li class="navButtons">
+        <a href="" style="color: white;">Configurações de Conta</a>
+      </li>
+      <li class="navButtons">
+        <a href="../php/functions/logout.php" style="color: white;">Sair</a>
       </li>
     </div>
   </ul>
@@ -102,8 +141,13 @@ div.desc {
         <center>
           <form action="#">
             <div style="display: inline-block; padding: 0px 48px 0px 48px;">
-              <table style="color:white; font-size: 16px;" id="returnMessage"></table>
+              <table style="color:white; font-size: 16px;" id="returnMessage">
+              
+            </table>
             </div>
+            <button  type="button" id="bFavoritar" name='btn_login' class='col s12 m4 l8 btn btn-large waves-effect'>
+              Salvar
+            </button>
           </form>
         </center>
       </div>

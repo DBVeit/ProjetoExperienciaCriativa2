@@ -5,6 +5,7 @@ $(document).ready(function(){
 
 	
 	if($('body').is('.displayMovie')){
+
 		fLocalDisplay();
 	}
 
@@ -33,34 +34,39 @@ function fLocalDisplay(){
         success: function (array) {
 			
 			var conteudo_tabela = "";
+			var tipo = 1;
+			var tipo = 0;
 
 			console.log(array["filme"].length);
 			console.log(array["filme"]);
+	
 
-
-			for(var i = 0; i < array["filme"].length; i++){
+				for(var i = 0; i < array["filme"].length; i++){
 				
-				
-				conteudo_tabela += "<tr>";
-				conteudo_tabela += "<td>" + array["filme"][i]["link"] + "</td>";
-				conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br><label><input type='checkbox' id='"+ array["filme"][i]["id"] + "' value='"+ array["filme"][i]["id"] +"' name='filmes' /><span>Favorito</span></label></td>";
-				//conteudo_tabela += "<td>" + array["filme"][i]["info"] + "</td>";	
-				conteudo_tabela += "</tr>";
+					conteudo_tabela += "<tr>";
 
+					if(array["filme"][0]["auth"] == "usuario"){
+						conteudo_tabela += "<td>" + array["filme"][i]["link"] + "</td>";
+					}else{
+						conteudo_tabela += "<td>" + array["filme"][i]["thumb"] + "</td>";
+					}
 
-				 /*<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  				<label for="vehicle1"> I have a bike</label><br></br>*/
+					if(array["filme"][0]["auth"] == "usuario"){
+						conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br><label><input type='checkbox' id='"+ array["filme"][i]["id"] + "' value='"+ array["filme"][i]["id"] +"' name='filmes' /><span>Favorito</span></label></td>";
+					}else{
+						conteudo_tabela += "<td>" + array["filme"][i]["titulo"] + "<br>" + array["filme"][i]["info"] + "<br>" + array["filme"][i]["id"] +" </td>";
+					}
+					
+					conteudo_tabela += "</tr>";
+	
+				}
+	
+				$("#returnMessage").html(conteudo_tabela);	
+			
+	
 
-				  /*<label>
-				  <input type="checkbox" />
-				  <span>Red</span>
-				</label>*/
-				
-				
-			}
+		}
 
-            $("#returnMessage").html(conteudo_tabela);
-        }
     }); 
 
 }
@@ -289,7 +295,7 @@ function fLocalComunicaServidor(formulario, file){ //se bugar remover ="form"
 
 					$("#returnMessage").html(conteudo_tabela);*/
 
-					window.location.href = 'pages/main.php';
+					window.location.href = 'pages/catalogo-geral.php';
 					
 				}else if (array["status"] == "u"){
 
